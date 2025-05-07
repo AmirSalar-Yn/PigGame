@@ -76,7 +76,7 @@ btnHoldGame.addEventListener('click', function () {
       totalScore[activePlayer];
 
     //winning the game logic
-    if (totalScore[activePlayer] >= 20) {
+    if (totalScore[activePlayer] >= 100) {
       isPlaying = false;
       //removing dice pic
       dicePic.classList.add('hidden');

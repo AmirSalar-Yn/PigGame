@@ -11,7 +11,7 @@ html {
   box-sizing: border-box;
 }
 
-body {
+/* body {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
   height: 100vh;
@@ -20,6 +20,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+} */
+
+/* In your style.css */
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  min-height: 100vh; /* Use min-height to ensure viewport coverage and allow content to expand */
+  color: #333;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  display: flex;
+  flex-direction: column; /* ⭐ Stack main and footer vertically */
+  align-items: center; /* ⭐ Center them horizontally on the page */
+  justify-content: center; /* ⭐ Center the whole block (main + footer) vertically */
+  padding: 2rem 0; /* Adds some overall padding, especially if content is shorter than viewport */
+  box-sizing: border-box; /* Ensures padding is included in the 100vh calculation */
 }
 
 /* LAYOUT */
@@ -167,4 +182,42 @@ main {
 }
 .hidden {
   display: none;
+}
+
+/* for the Footer of Page */
+.game-footer {
+  /* REMOVE these properties: */
+  /* position: fixed; */
+  /* bottom: 15px; */
+  /* left: 0; */
+  /* width: 100%; */
+  /* z-index: 10; */ /* Not strictly needed anymore, but doesn't hurt */
+
+  /* ADD or KEEP these: */
+  margin-top: 2.5rem; /* ⭐ Space between the main game box and the footer */
+  text-align: center;
+  width: 100rem; /* ⭐ Optional: Make footer width same as main for alignment */
+  /* Or let it be centered by body's align-items: center if you prefer a potentially narrower footer based on its content */
+}
+
+.game-footer p {
+  margin: 0.4rem 0; /* Slightly adjusted for visual balance */
+  font-size: 1.4rem; /* Or your desired size */
+  color: #f0f0f0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.game-footer .made-by {
+  font-weight: 300;
+}
+
+.game-footer a {
+  color: #f0e68c;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.game-footer a:hover {
+  text-decoration: underline;
+  color: #fff8dc;
 }
