@@ -1,4 +1,4 @@
-# PigGame
+# Pig Game
 Pig (dice) game using JS
 
 Each turn, a player repeatedly rolls a die until a 1 is rolled or the player decides to "hold":
